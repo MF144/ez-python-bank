@@ -1,15 +1,15 @@
 class Account:
-    def __init__(self, balance, deposit, withdraw):
+    def __init__(self, balance, deposit, withdraw): 
         self.balance = balance
         self.deposit = deposit
         self.withdraw = withdraw
 
-    def dp(self):
+    def dp(self): # deposit money
         self.deposit = float(input("How much would you like to deposit? "))
         self.balance += self.deposit
         print("P%s" % (self.deposit) + " has been added to your account.")
 
-    def wd(self):
+    def wd(self): 
         self.withdraw = float(input("How much would you like to withdraw? "))
         self.balance -= self.withdraw
         print("P%s" % (self.withdraw) +
@@ -39,10 +39,10 @@ while True:
     n = int(input("Enter your choice: "))
 
     if n == 1:
-        acc.dp()
+        acc.dp() # deposit money
     elif n == 2:
-        acc.wd()
+        acc.wd()  # withdraw money
     elif n == 3:
-        acc.bal()
+        acc.bal() # check balance
     elif n == 4:
-        break
+        break # exit
